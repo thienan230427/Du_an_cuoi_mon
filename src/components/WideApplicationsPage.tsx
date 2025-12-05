@@ -1,37 +1,38 @@
-import { motion } from "motion/react";
 import {
-  Heart,
-  GraduationCap,
-  Wallet,
-  Sprout,
-  ShoppingCart,
-  Car,
   Building,
+  Car,
+  Globe,
+  GraduationCap,
+  Heart,
+  ShoppingCart,
   Smartphone,
+  Sprout,
   TrendingUp,
   Users,
-  Globe,
+  Wallet,
   Zap,
 } from "lucide-react";
+import { motion } from "motion/react";
+import React from "react";
+import { Link } from "react-router-dom";
 import {
-  BarChart,
   Bar,
-  PieChart,
-  Pie,
+  BarChart,
+  CartesianGrid,
   Cell,
-  RadarChart,
-  Radar,
-  PolarGrid,
+  Legend,
+  Pie,
+  PieChart,
   PolarAngleAxis,
+  PolarGrid,
   PolarRadiusAxis,
+  Radar,
+  RadarChart,
+  ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
 } from "recharts";
-import { Link } from "react-router-dom";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 // Data về tỷ lệ áp dụng CNTT trong các ngành (%)

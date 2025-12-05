@@ -1,5 +1,6 @@
-import { Card } from "./ui/card";
 import { CheckCircle2 } from "lucide-react";
+import React from "react";
+import { Card } from "./ui/card";
 
 export function LearningRoadmap() {
   const roadmap = [
@@ -58,7 +59,7 @@ export function LearningRoadmap() {
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#0066FF]/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#9A5CFF]/5 rounded-full blur-3xl" />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="mb-4 bg-gradient-to-r from-[#0066FF] to-[#9A5CFF] bg-clip-text text-transparent">
@@ -75,7 +76,7 @@ export function LearningRoadmap() {
 
           <div className="space-y-12">
             {roadmap.map((stage, index) => (
-              <div 
+              <div
                 key={index}
                 className={`lg:grid lg:grid-cols-2 gap-8 items-center ${
                   index % 2 === 0 ? '' : 'lg:grid-flow-dense'
@@ -89,18 +90,18 @@ export function LearningRoadmap() {
                       <div className="lg:hidden w-12 h-12 bg-gradient-to-br from-[#0066FF] to-[#9A5CFF] rounded-full flex items-center justify-center flex-shrink-0">
                         <span className="text-white">{index + 1}</span>
                       </div>
-                      
+
                       <div className="flex-1">
                         <div className="inline-flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-[#0066FF]/10 to-[#9A5CFF]/10 rounded-full mb-3">
                           <span className="text-sm text-[#0066FF]">{stage.duration}</span>
                         </div>
-                        
+
                         <div className={`inline-block bg-gradient-to-r ${stage.color} bg-clip-text text-transparent mb-2`}>
                           {stage.phase}
                         </div>
-                        
+
                         <h3 className="mb-4 text-gray-900">{stage.title}</h3>
-                        
+
                         <ul className="space-y-3">
                           {stage.skills.map((skill, skillIndex) => (
                             <li key={skillIndex} className="flex items-start gap-2 text-gray-600">

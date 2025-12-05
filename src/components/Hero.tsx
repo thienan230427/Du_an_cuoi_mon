@@ -1,8 +1,9 @@
-import { Button } from "./ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ArrowRight, Sparkles } from "lucide-react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Button } from "./ui/button";
 
 export function Hero() {
   const navigate = useNavigate();

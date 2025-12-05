@@ -1,22 +1,23 @@
-import { useParams, Link } from "react-router-dom";
+import {
+  ArrowLeft,
+  BookOpen,
+  Briefcase,
+  Building2,
+  CheckCircle2,
+  Code2,
+  DollarSign,
+  GraduationCap,
+  TrendingUp
+} from "lucide-react";
+import React from "react";
+import { Link, useParams } from "react-router-dom";
+import { specializationsData } from "../data/specializations-data";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
-import { 
-  ArrowLeft, 
-  BookOpen, 
-  Briefcase, 
-  TrendingUp, 
-  Code2,
-  CheckCircle2,
-  Building2,
-  GraduationCap,
-  DollarSign
-} from "lucide-react";
-import { specializationsData } from "../data/specializations-data";
 
 export function SpecializationDetail() {
   const { id } = useParams<{ id: string }>();
-  
+
   if (!id || !specializationsData[id]) {
     return (
       <div className="min-h-screen pt-32 px-4 bg-white">
@@ -41,7 +42,7 @@ export function SpecializationDetail() {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#F5F7FA] via-white to-[#F5F7FA] relative overflow-hidden">
         <div className="absolute top-20 right-10 w-72 h-72 bg-[#0066FF]/5 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#9A5CFF]/5 rounded-full blur-3xl" />
-        
+
         <div className="max-w-7xl mx-auto relative z-10">
           <Link to="/">
             <Button variant="ghost" className="mb-8 hover:bg-[#0066FF]/10">
@@ -55,24 +56,24 @@ export function SpecializationDetail() {
               <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#0066FF]/10 to-[#9A5CFF]/10 rounded-full mb-4 border border-[#0066FF]/20">
                 <span className="text-sm text-[#0066FF]">{spec.subtitle}</span>
               </div>
-              
+
               <h1 className="mb-6 bg-gradient-to-r from-[#0066FF] to-[#9A5CFF] bg-clip-text text-transparent">
                 {spec.title}
               </h1>
-              
+
               <p className="text-gray-600 mb-8 text-lg">
                 {spec.description}
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Button 
+                <Button
                   size="lg"
                   className="bg-gradient-to-r from-[#0066FF] to-[#9A5CFF] hover:opacity-90 rounded-xl"
                 >
                   <BookOpen className="w-4 h-4 mr-2" />
                   Bắt đầu học ngay
                 </Button>
-                <Button 
+                <Button
                   size="lg"
                   variant="outline"
                   className="rounded-xl border-2 border-[#0066FF] text-[#0066FF] hover:bg-[#0066FF] hover:text-white"
@@ -130,7 +131,7 @@ export function SpecializationDetail() {
               </div>
               <div className="flex flex-wrap gap-2">
                 {spec.tools.map((tool, index) => (
-                  <span 
+                  <span
                     key={index}
                     className="px-3 py-1 bg-white rounded-lg text-sm text-gray-700 border border-gray-200"
                   >
@@ -200,7 +201,7 @@ export function SpecializationDetail() {
 
           <div className="space-y-6">
             {spec.roadmap.map((phase, index) => (
-              <Card 
+              <Card
                 key={index}
                 className="p-8 rounded-2xl border-2 border-gray-100 hover:border-[#0066FF] transition-all bg-white"
               >
@@ -245,7 +246,7 @@ export function SpecializationDetail() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {spec.courses.map((course, index) => (
-              <Card 
+              <Card
                 key={index}
                 className="p-6 rounded-2xl border-2 border-gray-100 hover:border-[#0066FF] transition-all bg-white group cursor-pointer"
               >
@@ -298,14 +299,14 @@ export function SpecializationDetail() {
             Tham gia cộng đồng hàng nghìn học viên đang học tập và phát triển mỗi ngày
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button 
+            <Button
               size="lg"
               className="bg-white text-[#0066FF] hover:bg-gray-100 rounded-xl"
             >
               <BookOpen className="w-4 h-4 mr-2" />
               Đăng ký học ngay
             </Button>
-            <Button 
+            <Button
               size="lg"
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-[#0066FF] rounded-xl"

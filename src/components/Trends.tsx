@@ -1,3 +1,4 @@
+import React from "react";
 import { Card } from "./ui/card";
 import { Brain, Cloud, Shield, TrendingUp, Globe2, Zap } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";

@@ -1,7 +1,8 @@
-import { Card } from "./ui/card";
-import { TrendingUp, Globe, Users, ArrowRight } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { ArrowRight, Globe, TrendingUp, Users } from "lucide-react";
+import React from "react";
 import { Link } from "react-router-dom";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Card } from "./ui/card";
 
 export function AboutIT() {
   const highlights = [

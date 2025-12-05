@@ -1,3 +1,4 @@
+import React from "react";
 import { Code2, Facebook, Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
@@ -208,7 +209,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-gray-400 text-sm">
                 <Mail className="w-4 h-4 text-[#0066FF]" />
-                contact@itfuture.edu.vn
+                an25900600029.edu.vn
               </li>
               <li className="text-gray-400 text-sm">
                 <div className="text-white mb-1">Giờ làm việc</div>

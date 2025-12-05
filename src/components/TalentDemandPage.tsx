@@ -1,36 +1,35 @@
-import { motion, useInView, useAnimation } from "motion/react";
-import { useState, useEffect, useRef } from "react";
 import {
-  Users,
-  TrendingUp,
-  Briefcase,
-  DollarSign,
-  Code,
-  Shield,
-  Database,
-  Brain,
-  Target,
-  MapPin,
-  GraduationCap,
   ArrowRight,
+  Brain,
+  Briefcase,
+  Code,
+  Database,
+  DollarSign,
+  GraduationCap,
+  MapPin,
+  Shield,
   Sparkles,
+  Target,
+  TrendingUp,
+  Users,
 } from "lucide-react";
-import {
-  BarChart,
-  Bar,
-  LineChart,
-  Line,
-  ComposedChart,
-  Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-  Cell,
-} from "recharts";
+import { motion, useInView } from "motion/react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  Area,
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Cell,
+  ComposedChart,
+  Legend,
+  Line,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis
+} from "recharts";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 // Data về nhu cầu tuyển dụng theo vị trí
@@ -254,11 +253,12 @@ function CounterAnimation({
 // Floating Animation for decorative elements
 const floatingAnimation = {
   y: [0, -10, 0],
-  transition: {
-    duration: 3,
-    repeat: Infinity,
-    ease: "easeInOut",
-  },
+};
+
+const floatingTransition = {
+  duration: 3,
+  repeat: Infinity,
+  ease: "easeInOut" as const,
 };
 
 export function TalentDemandPage() {
@@ -274,13 +274,12 @@ export function TalentDemandPage() {
         {/* Floating decorative elements */}
         <motion.div
           animate={floatingAnimation}
+          transition={floatingTransition}
           className="absolute top-20 right-20 w-20 h-20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-2xl"
         />
         <motion.div
-          animate={{
-            ...floatingAnimation,
-            transition: { ...floatingAnimation.transition, delay: 1 },
-          }}
+          animate={floatingAnimation}
+          transition={{ ...floatingTransition, delay: 1 }}
           className="absolute bottom-20 left-20 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-2xl"
         />
 

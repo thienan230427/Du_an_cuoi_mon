@@ -1,11 +1,12 @@
-import { Hero } from "./Hero";
+import React from "react";
 import { AboutIT } from "./AboutIT";
-import { Specializations } from "./Specializations";
-import { LearningRoadmap } from "./LearningRoadmap";
-import { JobPositions } from "./JobPositions";
-import { SalaryInfo } from "./SalaryInfo";
-import { Trends } from "./Trends";
 import { Contact } from "./Contact";
+import { Hero } from "./Hero";
+import { JobPositions } from "./JobPositions";
+import { LearningRoadmap } from "./LearningRoadmap";
+import { SalaryInfo } from "./SalaryInfo";
+import { Specializations } from "./Specializations";
+import { Trends } from "./Trends";
 
 export function HomePage() {
   return (

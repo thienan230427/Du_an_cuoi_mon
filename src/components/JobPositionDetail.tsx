@@ -1,26 +1,27 @@
-import { useParams, Link } from "react-router-dom";
-import { Button } from "./ui/button";
-import { Card } from "./ui/card";
-import { 
-  ArrowLeft, 
-  Briefcase, 
-  TrendingUp, 
-  CheckCircle2,
-  Building2,
-  GraduationCap,
-  DollarSign,
-  Star,
+import {
   AlertCircle,
-  Target,
+  ArrowLeft,
+  Award,
   BookOpen,
-  Award
+  Briefcase,
+  Building2,
+  CheckCircle2,
+  DollarSign,
+  GraduationCap,
+  Star,
+  Target,
+  TrendingUp
 } from "lucide-react";
+import React from "react";
+import { Link, useParams } from "react-router-dom";
 import { jobPositionsData } from "../data/job-positions-data";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Button } from "./ui/button";
+import { Card } from "./ui/card";
 
 export function JobPositionDetail() {
   const { id } = useParams<{ id: string }>();
-  
+
   if (!id || !jobPositionsData[id]) {
     return (
       <div className="min-h-screen pt-32 px-4 bg-white">
@@ -45,7 +46,7 @@ export function JobPositionDetail() {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#F5F7FA] via-white to-[#F5F7FA] relative overflow-hidden">
         <div className="absolute top-20 right-10 w-72 h-72 bg-[#0066FF]/5 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#9A5CFF]/5 rounded-full blur-3xl" />
-        
+
         <div className="max-w-7xl mx-auto relative z-10">
           <Link to="/">
             <Button variant="ghost" className="mb-8 hover:bg-[#0066FF]/10">
@@ -59,24 +60,24 @@ export function JobPositionDetail() {
               <div className="inline-block px-4 py-2 bg-gradient-to-r from-[#0066FF]/10 to-[#9A5CFF]/10 rounded-full mb-4 border border-[#0066FF]/20">
                 <span className="text-sm text-[#0066FF]">{job.subtitle}</span>
               </div>
-              
+
               <h1 className="mb-6 bg-gradient-to-r from-[#0066FF] to-[#9A5CFF] bg-clip-text text-transparent">
                 {job.title}
               </h1>
-              
+
               <p className="text-gray-600 mb-8 text-lg">
                 {job.description}
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Button 
+                <Button
                   size="lg"
                   className="bg-gradient-to-r from-[#0066FF] to-[#9A5CFF] hover:opacity-90 rounded-xl"
                 >
                   <Briefcase className="w-4 h-4 mr-2" />
                   Tìm việc làm
                 </Button>
-                <Button 
+                <Button
                   size="lg"
                   variant="outline"
                   className="rounded-xl border-2 border-[#0066FF] text-[#0066FF] hover:bg-[#0066FF] hover:text-white"
@@ -291,7 +292,7 @@ export function JobPositionDetail() {
 
           <div className="space-y-6">
             {job.careerPath.map((path, index) => (
-              <Card 
+              <Card
                 key={index}
                 className="p-8 rounded-2xl border-2 border-gray-100 hover:border-[#0066FF] transition-all bg-white"
               >
@@ -324,7 +325,7 @@ export function JobPositionDetail() {
               <h3 className="mb-6 text-gray-900">Công cụ & Công nghệ sử dụng</h3>
               <div className="flex flex-wrap gap-3">
                 {job.tools.map((tool, index) => (
-                  <span 
+                  <span
                     key={index}
                     className="px-4 py-2 bg-gradient-to-br from-[#F5F7FA] to-white rounded-xl border-2 border-gray-100 hover:border-[#0066FF] transition-all text-gray-700"
                   >
@@ -339,7 +340,7 @@ export function JobPositionDetail() {
               <h3 className="mb-6 text-gray-900">Các công ty tuyển dụng</h3>
               <div className="flex flex-wrap gap-3">
                 {job.companies.map((company, index) => (
-                  <span 
+                  <span
                     key={index}
                     className="px-4 py-2 bg-gradient-to-br from-[#0066FF]/5 to-[#9A5CFF]/5 rounded-xl border-2 border-[#0066FF]/20 text-gray-700"
                   >
@@ -405,14 +406,14 @@ export function JobPositionDetail() {
             Khám phá các cơ hội việc làm hấp dẫn và bắt đu hành trình phát triển của bạn
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button 
+            <Button
               size="lg"
               className="bg-white text-[#0066FF] hover:bg-gray-100 rounded-xl"
             >
               <Briefcase className="w-4 h-4 mr-2" />
               Tìm việc ngay
             </Button>
-            <Button 
+            <Button
               size="lg"
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-[#0066FF] rounded-xl"

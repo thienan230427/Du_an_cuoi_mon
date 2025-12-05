@@ -1,7 +1,8 @@
+import { Award, BarChart3, Briefcase, Building2, DollarSign, Globe, TrendingUp, Users } from "lucide-react";
 import { motion } from "motion/react";
-import { TrendingUp, Users, DollarSign, Briefcase, Globe, Building2, Award, BarChart3 } from "lucide-react";
-import { LineChart, Line, BarChart, Bar, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import React from "react";
 import { Link } from "react-router-dom";
+import { Area, AreaChart, Bar, BarChart, CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 // Data về tăng trưởng GDP ngành CNTT Việt Nam
 const gdpGrowthData = [
@@ -107,7 +108,7 @@ export function GrowthTrendsPage() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-pink-600/10" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDMiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-40" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -186,19 +187,19 @@ export function GrowthTrendsPage() {
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                  <XAxis 
-                    dataKey="year" 
+                  <XAxis
+                    dataKey="year"
                     stroke="#64748b"
                     style={{ fontSize: '14px' }}
                   />
-                  <YAxis 
+                  <YAxis
                     stroke="#64748b"
                     style={{ fontSize: '14px' }}
                     label={{ value: '% Tăng trưởng', angle: -90, position: 'insideLeft' }}
                   />
-                  <Tooltip 
-                    contentStyle={{ 
-                      backgroundColor: 'rgba(255, 255, 255, 0.95)', 
+                  <Tooltip
+                    contentStyle={{
+                      backgroundColor: 'rgba(255, 255, 255, 0.95)',
                       border: '1px solid #e2e8f0',
                       borderRadius: '12px',
                       padding: '12px'
@@ -206,22 +207,22 @@ export function GrowthTrendsPage() {
                     formatter={(value: number) => [`${value}%`, '']}
                   />
                   <Legend />
-                  <Area 
-                    type="monotone" 
-                    dataKey="value" 
-                    stroke="#3b82f6" 
+                  <Area
+                    type="monotone"
+                    dataKey="value"
+                    stroke="#3b82f6"
                     strokeWidth={3}
-                    fillOpacity={1} 
-                    fill="url(#colorVN)" 
+                    fillOpacity={1}
+                    fill="url(#colorVN)"
                     name="Việt Nam"
                   />
-                  <Area 
-                    type="monotone" 
-                    dataKey="worldAverage" 
-                    stroke="#8b5cf6" 
+                  <Area
+                    type="monotone"
+                    dataKey="worldAverage"
+                    stroke="#8b5cf6"
                     strokeWidth={3}
-                    fillOpacity={1} 
-                    fill="url(#colorWorld)" 
+                    fillOpacity={1}
+                    fill="url(#colorWorld)"
                     name="Trung bình Thế giới"
                   />
                 </AreaChart>
@@ -254,19 +255,19 @@ export function GrowthTrendsPage() {
               <ResponsiveContainer width="100%" height={400}>
                 <BarChart data={jobGrowthData}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                  <XAxis 
-                    dataKey="year" 
+                  <XAxis
+                    dataKey="year"
                     stroke="#64748b"
                     style={{ fontSize: '14px' }}
                   />
-                  <YAxis 
+                  <YAxis
                     stroke="#64748b"
                     style={{ fontSize: '14px' }}
                     label={{ value: 'Nghìn người', angle: -90, position: 'insideLeft' }}
                   />
-                  <Tooltip 
-                    contentStyle={{ 
-                      backgroundColor: 'rgba(255, 255, 255, 0.95)', 
+                  <Tooltip
+                    contentStyle={{
+                      backgroundColor: 'rgba(255, 255, 255, 0.95)',
                       border: '1px solid #e2e8f0',
                       borderRadius: '12px',
                       padding: '12px'
@@ -274,15 +275,15 @@ export function GrowthTrendsPage() {
                     formatter={(value: number) => [`${value}K người`, '']}
                   />
                   <Legend />
-                  <Bar 
-                    dataKey="jobs" 
-                    fill="#10b981" 
+                  <Bar
+                    dataKey="jobs"
+                    fill="#10b981"
                     name="Nhân sự hiện tại"
                     radius={[8, 8, 0, 0]}
                   />
-                  <Bar 
-                    dataKey="demand" 
-                    fill="#f59e0b" 
+                  <Bar
+                    dataKey="demand"
+                    fill="#f59e0b"
                     name="Nhu cầu tuyển dụng"
                     radius={[8, 8, 0, 0]}
                   />
@@ -319,19 +320,19 @@ export function GrowthTrendsPage() {
               <ResponsiveContainer width="100%" height={400}>
                 <LineChart data={salaryGrowthData}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                  <XAxis 
-                    dataKey="year" 
+                  <XAxis
+                    dataKey="year"
                     stroke="#64748b"
                     style={{ fontSize: '14px' }}
                   />
-                  <YAxis 
+                  <YAxis
                     stroke="#64748b"
                     style={{ fontSize: '14px' }}
                     label={{ value: 'Triệu VNĐ', angle: -90, position: 'insideLeft' }}
                   />
-                  <Tooltip 
-                    contentStyle={{ 
-                      backgroundColor: 'rgba(255, 255, 255, 0.95)', 
+                  <Tooltip
+                    contentStyle={{
+                      backgroundColor: 'rgba(255, 255, 255, 0.95)',
                       border: '1px solid #e2e8f0',
                       borderRadius: '12px',
                       padding: '12px'
@@ -339,26 +340,26 @@ export function GrowthTrendsPage() {
                     formatter={(value: number) => [`${value} triệu`, '']}
                   />
                   <Legend />
-                  <Line 
-                    type="monotone" 
-                    dataKey="junior" 
-                    stroke="#06b6d4" 
+                  <Line
+                    type="monotone"
+                    dataKey="junior"
+                    stroke="#06b6d4"
                     strokeWidth={3}
                     name="Junior (0-2 năm)"
                     dot={{ r: 5 }}
                   />
-                  <Line 
-                    type="monotone" 
-                    dataKey="mid" 
-                    stroke="#8b5cf6" 
+                  <Line
+                    type="monotone"
+                    dataKey="mid"
+                    stroke="#8b5cf6"
                     strokeWidth={3}
                     name="Mid-level (2-5 năm)"
                     dot={{ r: 5 }}
                   />
-                  <Line 
-                    type="monotone" 
-                    dataKey="senior" 
-                    stroke="#ec4899" 
+                  <Line
+                    type="monotone"
+                    dataKey="senior"
+                    stroke="#ec4899"
                     strokeWidth={3}
                     name="Senior (5+ năm)"
                     dot={{ r: 5 }}
@@ -404,44 +405,44 @@ export function GrowthTrendsPage() {
               <ResponsiveContainer width="100%" height={400}>
                 <BarChart data={investmentData}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                  <XAxis 
-                    dataKey="year" 
+                  <XAxis
+                    dataKey="year"
                     stroke="#64748b"
                     style={{ fontSize: '14px' }}
                   />
-                  <YAxis 
+                  <YAxis
                     yAxisId="left"
                     stroke="#64748b"
                     style={{ fontSize: '14px' }}
                     label={{ value: 'Số lượng', angle: -90, position: 'insideLeft' }}
                   />
-                  <YAxis 
+                  <YAxis
                     yAxisId="right"
                     orientation="right"
                     stroke="#64748b"
                     style={{ fontSize: '14px' }}
                     label={{ value: 'Triệu USD', angle: 90, position: 'insideRight' }}
                   />
-                  <Tooltip 
-                    contentStyle={{ 
-                      backgroundColor: 'rgba(255, 255, 255, 0.95)', 
+                  <Tooltip
+                    contentStyle={{
+                      backgroundColor: 'rgba(255, 255, 255, 0.95)',
                       border: '1px solid #e2e8f0',
                       borderRadius: '12px',
                       padding: '12px'
                     }}
                   />
                   <Legend />
-                  <Bar 
+                  <Bar
                     yAxisId="left"
-                    dataKey="startups" 
-                    fill="#6366f1" 
+                    dataKey="startups"
+                    fill="#6366f1"
                     name="Số lượng Startup"
                     radius={[8, 8, 0, 0]}
                   />
-                  <Bar 
+                  <Bar
                     yAxisId="right"
-                    dataKey="investment" 
-                    fill="#10b981" 
+                    dataKey="investment"
+                    fill="#10b981"
                     name="Vốn đầu tư (triệu USD)"
                     radius={[8, 8, 0, 0]}
                   />

@@ -1,16 +1,17 @@
-import { Card } from "./ui/card";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  Code2,
-  Shield,
-  Server,
   BarChart3,
-  Network,
-  Headphones,
-  Database,
   Bug,
+  Code2,
+  Database,
+  Headphones,
+  Network,
+  Server,
+  Shield,
 } from "lucide-react";
+import React from "react";
+import { Link } from "react-router-dom";
+import { Card } from "./ui/card";
 
 export function JobPositions() {
   const positions = [

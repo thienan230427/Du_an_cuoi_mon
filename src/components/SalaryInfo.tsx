@@ -1,5 +1,6 @@
+import { DollarSign, TrendingUp } from "lucide-react";
+import React from "react";
 import { Card } from "./ui/card";
-import { TrendingUp, DollarSign } from "lucide-react";
 
 export function SalaryInfo() {
   const salaryData = [
@@ -77,9 +78,9 @@ export function SalaryInfo() {
               <div className="w-16 h-16 bg-gradient-to-br from-[#0066FF] to-[#9A5CFF] rounded-2xl flex items-center justify-center mb-6">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
-              
+
               <h3 className="mb-4 text-gray-900">Điểm nổi bật về lương</h3>
-              
+
               <ul className="space-y-4">
                 <li className="flex gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#0066FF] mt-2 flex-shrink-0" />

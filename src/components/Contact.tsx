@@ -1,3 +1,4 @@
+import React from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -127,8 +128,8 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-gray-900 mb-1">Email</h4>
-                  <p className="text-gray-600">contact@itfuture.edu.vn</p>
-                  <p className="text-gray-600">info@itfuture.edu.vn</p>
+                  <p className="text-gray-600">an25800600029.edu.vn</p>
+                  <p className="text-gray-600">an25800600029.edu.vn</p>
                 </div>
               </div>
             </Card>
@@ -154,7 +155,7 @@ export function Contact() {
                 <div>
                   <h4 className="text-gray-900 mb-1">Địa chỉ</h4>
                   <p className="text-gray-600">
-                    123 Đường Công Nghệ, Quận 1<br />
+                    475A Đại Học HUTECH <br />
                     Thành phố Hồ Chí Minh, Việt Nam
                   </p>
                 </div>

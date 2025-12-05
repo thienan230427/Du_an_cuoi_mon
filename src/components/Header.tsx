@@ -1,3 +1,4 @@
+import React from "react";
 import { Button } from "./ui/button";
 import { Code2, Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -69,43 +70,43 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a 
-              href="#home" 
+            <a
+              href="#home"
               onClick={(e) => handleNavClick(e, 'home')}
               className="text-gray-700 hover:text-[#0066FF] transition-colors"
             >
               Trang chủ
             </a>
-            <a 
-              href="#about" 
+            <a
+              href="#about"
               onClick={(e) => handleNavClick(e, 'about')}
               className="text-gray-700 hover:text-[#0066FF] transition-colors"
             >
               Giới thiệu
             </a>
-            <a 
-              href="#specializations" 
+            <a
+              href="#specializations"
               onClick={(e) => handleNavClick(e, 'specializations')}
               className="text-gray-700 hover:text-[#0066FF] transition-colors"
             >
               Chuyên ngành
             </a>
-            <a 
-              href="#roadmap" 
+            <a
+              href="#roadmap"
               onClick={(e) => handleNavClick(e, 'roadmap')}
               className="text-gray-700 hover:text-[#0066FF] transition-colors"
             >
               Lộ trình học
             </a>
-            <a 
-              href="#careers" 
+            <a
+              href="#careers"
               onClick={(e) => handleNavClick(e, 'careers')}
               className="text-gray-700 hover:text-[#0066FF] transition-colors"
             >
               Nghề nghiệp
             </a>
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               onClick={(e) => handleNavClick(e, 'contact')}
               className="text-gray-700 hover:text-[#0066FF] transition-colors"
             >
@@ -115,7 +116,7 @@ export function Header() {
 
           {/* CTA Button - Desktop */}
           <div className="hidden md:block">
-            <Button 
+            <Button
               onClick={handleCtaClick}
               className="bg-gradient-to-r from-[#0066FF] to-[#9A5CFF] hover:opacity-90 rounded-xl"
             >
@@ -136,49 +137,49 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col gap-4">
-              <a 
-                href="#home" 
+              <a
+                href="#home"
                 onClick={(e) => handleNavClick(e, 'home')}
                 className="text-gray-700 hover:text-[#0066FF] transition-colors"
               >
                 Trang chủ
               </a>
-              <a 
-                href="#about" 
+              <a
+                href="#about"
                 onClick={(e) => handleNavClick(e, 'about')}
                 className="text-gray-700 hover:text-[#0066FF] transition-colors"
               >
                 Giới thiệu
               </a>
-              <a 
-                href="#specializations" 
+              <a
+                href="#specializations"
                 onClick={(e) => handleNavClick(e, 'specializations')}
                 className="text-gray-700 hover:text-[#0066FF] transition-colors"
               >
                 Chuyên ngành
               </a>
-              <a 
-                href="#roadmap" 
+              <a
+                href="#roadmap"
                 onClick={(e) => handleNavClick(e, 'roadmap')}
                 className="text-gray-700 hover:text-[#0066FF] transition-colors"
               >
                 Lộ trình học
               </a>
-              <a 
-                href="#careers" 
+              <a
+                href="#careers"
                 onClick={(e) => handleNavClick(e, 'careers')}
                 className="text-gray-700 hover:text-[#0066FF] transition-colors"
               >
                 Nghề nghiệp
               </a>
-              <a 
-                href="#contact" 
+              <a
+                href="#contact"
                 onClick={(e) => handleNavClick(e, 'contact')}
                 className="text-gray-700 hover:text-[#0066FF] transition-colors"
               >
                 Liên hệ
               </a>
-              <Button 
+              <Button
                 onClick={handleCtaClick}
                 className="bg-gradient-to-r from-[#0066FF] to-[#9A5CFF] hover:opacity-90 rounded-xl w-full"
               >

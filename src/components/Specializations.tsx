@@ -1,3 +1,4 @@
+import React from "react";
 import { Card } from "./ui/card";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
