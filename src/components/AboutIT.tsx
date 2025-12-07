@@ -70,7 +70,7 @@ export function AboutIT() {
                 <strong className="text-gray-900">
                   Big Data & Cloud Computing:
                 </strong>{" "}
-                Lưu trữ và xử lý lượng dữ liệu khổng lồ, phục vụ nghiên cứu và
+                Lưu trữ và xử lý lượng dữ liệu khổng lồ, phục vụ nghiên cứu và 
                 kinh doanh.
               </p>
               <p>
